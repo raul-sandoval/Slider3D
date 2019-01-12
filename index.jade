@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Slider 3D
+        link(rel="shortcut icon", href="img/favicon.png", type="image/x-icon")
+        link(rel="stylesheet", href="css/main.css")
+        link(rel="stylesheet", href="css/fontello.css")
+    body
+        .content-all
+            .content-img#img1
+                a(href="#img5").icon-left-open
+                img(src="img/1.jpg", alt="", srcset="")
+                a(href="#img2").icon-right-open
+
+            .content-img#img2
+                a(href="#img1").icon-left-open
+                img(src="img/2.jpg", alt="", srcset="")
+                a(href="#img3").icon-right-open
+                .content-details
+                    h3 Bienvenido
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa labore accusantium necessitatibus ab enim doloremque in placeat nihil nesciunt.
+                    input(type="button", value="Contacto")
+                    h3.espacio Ing. Raúl Sandoval Meléndez.
+            .content-img#img3
+                a(href="#img2").icon-left-open
+                img(src="img/3.jpg", alt="", srcset="")
+                a(href="#img4").icon-right-open
+            
+            .content-img#img4
+                a(href="#img3").icon-left-open
+                img(src="img/4.jpg", alt="", srcset="")
+                a(href="#img5").icon-right-open
+            
+            .content-img#img5
+                a(href="#img4").icon-left-open
+                img(src="img/5.jpg", alt="", srcset="")
+                a(href="#img1").icon-right-open

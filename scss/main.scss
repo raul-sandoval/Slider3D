@@ -1,0 +1,146 @@
+$height: 500px;
+$width: 800px;
+$font-color: #DDDDDD;
+$font-color-hover: seashell;
+$background: url(../img/fondo.png);
+$font-animation-time: 0.3s;
+$img-animation-time: 1.2s;
+$perspective: 800px;
+
+@function mitadH()
+{
+    @return ($height/2);
+}
+
+@function mitadW()
+{
+    @return ($width/2);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-image: $background;
+}
+
+.content-all
+{
+    width: $width;
+    height: $height;
+    position: relative;
+    display: flex;
+    margin: auto;
+    margin-top: 5%;
+    overflow: hidden;
+    perspective: $perspective;
+    box-shadow: 0px 20px 40px 0px black;
+}
+
+.content-img
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateX(-100%) rotateY(360deg);
+    transition: all $img-animation-time;
+    & img
+    {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#img1
+{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.content-img:target
+{
+    transform: translateX(0%) rotateY(0deg);
+    opacity: 1;
+}
+
+.icon-left-open
+{
+    position: absolute;
+    top: mitadH();
+    left: 0;
+    font-size: 40px;
+    text-decoration: none;
+    color: $font-color;
+    transition: all $font-animation-time;
+    &:hover
+    {
+        color:$font-color-hover;
+    }
+}
+
+.icon-right-open
+{
+    position: absolute;
+    top: mitadH();
+    right: 0;
+    font-size: 40px;
+    text-decoration: none;
+    color: $font-color;
+    transition: all $font-animation-time;
+    &:hover
+    {
+        color: $font-color-hover;
+    }
+}
+
+.content-details
+{
+
+    position: relative;
+    top: -350px;
+    width: mitadW();
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-details p
+{
+    margin-top: 10px;
+}
+
+.content-details input[type="button"]
+{
+    padding: 6px 40px;
+    font-size: 18px;
+    margin-top: 10px;
+    background: rgba(255,10,0,0.5);
+    border-style: none;
+    color: white;
+    outline: 0px;
+    transition: all 0.5s;
+}
+
+.content-details input[type="button"]:hover
+{
+    background: rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.espacio
+{
+    margin-top: 35px;
+}
