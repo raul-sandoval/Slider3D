@@ -1,1 +1,1 @@
-# Slider3D
+# Simple slider con html5 y css3
